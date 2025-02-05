@@ -13,12 +13,12 @@ function App() {
     })
   }
 
-
 return (
   <>
     <SearchBar searchCity={(searchCity) => {
       getCurrentWeather(searchCity)
     }} />
+    
     <WeatherDetail weatherData ={weatherData} />
 
   </>
