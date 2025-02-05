@@ -1,36 +1,45 @@
 import React from 'react'
 import { useState } from 'react'
 import { getWeatherData } from '../Services/ApiServices'
+import { FaSearch } from 'react-icons/fa'
 
 const SearchBar = () => {
     const [city, setCity] = useState('')
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        console.log(city)
+        getWeatherData(city).then(
+            response => {
+                console.log(response.data)
+                console.log(response.data.location.country)
+            }
+        )
     }
 
     const onChange = (e) => {
         setCity(e.target.value)
     }
-    
-  return (
-    <>
-    <form onSubmit = {handleSubmit}>
-        <input 
-            className='bg-gray-300 rounded-lg p-5 h-10 w-80'
-            type="text" 
-            placeholder="Search City" 
-            value={city}
-            onChange={onChange}
-        />
 
-        <button
-        type='submit'>
-            Search</button>
-    </form>
-    </>
-  )
+    return (
+        <>
+            <form onSubmit={handleSubmit}>
+                <input
+                    className='bg-gray-300 rounded-lg p-5 h-11 w-80'
+                    type="text"
+                    placeholder="Search City"
+                    value={city}
+                    onChange={onChange}
+                />
+
+                <button 
+                className = 'ml-3' 
+                type='submit'>
+                    <FaSearch
+                    className ='h-5 w-5' />
+                </button>
+            </form>
+        </>
+    )
 }
 
 export default SearchBar
