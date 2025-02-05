@@ -1,7 +1,5 @@
 import axios from "axios"
 
-
-
 const apiRequest = axios.create({
     baseURL: 'http://api.weatherapi.com/v1/',
     headers: {
@@ -11,5 +9,5 @@ const apiRequest = axios.create({
 })
 
 export function getWeatherData(city) {
-   return apiRequest.get(`current.json?q=${city}`)
+    return apiRequest.get(`current.json?q=${city}`)
 }

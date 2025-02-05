@@ -4,19 +4,26 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import SearchBar from './Components/SearchBar'
 import { getWeatherData } from './Services/ApiServices'
-export {getWeatherData} from './Services/ApiServices'
+
 
 function App() {
+  //Sample API working using axios
+  useEffect(() => {
+    getWeatherData('Manila').then(
+      response => {
+        const data = response.data
+        console.log(response.data)
+        console.log(response.data.location.country)
+      }
+    )
 
-useEffect(() => {
-  getWeatherData('Manila').then( res => console.log(res.data)).catch(err => console.log(err))
-})
+  }, [])
 
   return (
-   <>
-    <SearchBar />
+    <>
+      <SearchBar />
 
-   </>
+    </>
   )
 }
 
