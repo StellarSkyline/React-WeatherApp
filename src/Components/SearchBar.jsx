@@ -3,17 +3,12 @@ import { useState } from 'react'
 import { getWeatherData } from '../Services/ApiServices'
 import { FaSearch } from 'react-icons/fa'
 
-const SearchBar = () => {
+const SearchBar = ({searchCity}) => {
     const [city, setCity] = useState('')
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        getWeatherData(city).then(
-            response => {
-                console.log(response.data)
-                console.log(response.data.location.country)
-            }
-        )
+        searchCity(city)
     }
 
     const onChange = (e) => {
