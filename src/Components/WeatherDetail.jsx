@@ -7,7 +7,8 @@ const WeatherDetail = (weatherData) => {
   console.log(weatherData)
   
   return (
-    <div>WeatherDetail</div>
+    <>
+    </>
   )
 }
 

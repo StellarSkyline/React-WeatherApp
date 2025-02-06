@@ -5,9 +5,11 @@ import { useState, useEffect } from 'react'
 import { getWeatherData, getSearchCitiesData } from './Services/ApiServices'
 
 function App() {
+  //State
   const [weatherData, setWeatherData] = useState('')
   const [searchCities, setSearchCities] = useState([])
 
+  //API Calls, research a viewModel pattern
   const getCurrentWeather = (city) => {
     getWeatherData(city).then((res)=> {
       setWeatherData(res.data)
@@ -27,7 +29,6 @@ return (
     }} />
     
     <WeatherDetail weatherData ={weatherData} />
-
   </>
 )
 }
