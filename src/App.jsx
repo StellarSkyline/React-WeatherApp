@@ -3,6 +3,7 @@ import SearchBar from './Components/SearchBar'
 import WeatherDetail from './Components/WeatherDetail'
 import { useState, useEffect } from 'react'
 import { getWeatherData, getSearchCitiesData } from './Services/ApiServices'
+import { useSelector } from 'react-redux'
 
 function App() {
   //State
@@ -22,6 +23,8 @@ function App() {
     })
   }
 
+
+
 return (
   <>
     <SearchBar searchCity={(searchCity) => {
@@ -34,3 +37,5 @@ return (
 }
 
 export default App
+
+
