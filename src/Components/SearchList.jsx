@@ -23,7 +23,7 @@ const SearchList = ({showList}) => {
     <ul>
         {cityData.map((item) => (
             <li key ={item.id} onClick={ () => onClick(`${item.lat},${item.lon}`)}>
-                {item.name} | {item.country}
+                {item.name} | {item.region} | {item.country}
             </li>
         ))}
 

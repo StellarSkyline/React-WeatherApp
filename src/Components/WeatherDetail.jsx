@@ -3,9 +3,10 @@ import { useSelector } from 'react-redux'
 
 
 const WeatherDetail = () => {
+  const data = useSelector(state=>state.weatherData)
   return (
     <>
-    <h1>WeatherDetail</h1>
+    <h1>{data.location.name} | {data.location.region} | {data.location.country}</h1>
     </>
   )
 }

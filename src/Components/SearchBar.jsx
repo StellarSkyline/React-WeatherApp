@@ -14,6 +14,7 @@ const SearchBar = () => {
         getSearchCitiesData(city).then((res)=> {
             console.log(res.data)
             dispatch(updateList(res.data))
+            setCity('')
         })
     
     }
