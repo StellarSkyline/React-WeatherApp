@@ -1,14 +1,21 @@
 import React from 'react'
 import { useState } from 'react'
-import { getWeatherData } from '../Services/ApiServices'
 import { FaSearch } from 'react-icons/fa'
+import { getSearchCitiesData } from '../Services/ApiServices'
+import { useDispatch } from 'react-redux'
+import { updateList } from '../Features/SearchCities'
 
-const SearchBar = ({searchCity}) => {
+const SearchBar = () => {
+    const dispatch = useDispatch()
     const [city, setCity] = useState('')
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        searchCity(city)
+        getSearchCitiesData(city).then((res)=> {
+            console.log(res.data)
+            dispatch(updateList(res.data))
+        })
+    
     }
 
     const onChange = (e) => {
