@@ -10,10 +10,10 @@ function App() {
 
   //Load in correct Components
   const loadContent = (isList) => {
-    if(isList) {
-      return <SearchList showList={(res)=>{setShowList(res)}}/>
+    if (isList) {
+      return <SearchList showList={(res) => { setShowList(res) }} />
     } else {
-      return <WeatherDetail/>
+      return <WeatherDetail />
     }
 
   }
