@@ -1,10 +1,12 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 import { getWeatherData } from '../Services/ApiServices'
+import { useSelector } from 'react-redux'
 
 
-const WeatherDetail = (weatherData) => {
-  console.log(weatherData)
+const WeatherDetail = () => {
+  const data = useSelector(state=>state.weatherData)
+  console.log(data)
   
   return (
     <>

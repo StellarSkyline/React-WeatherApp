@@ -53,7 +53,8 @@ export const WeatherDataSlice = createSlice({
     initialState,
     reducers: {
         updateData:(state,action) => {
-            state = action.payload 
+            state.current = action.payload.current
+            state.location = action.payload.location
         }
     }
 })
