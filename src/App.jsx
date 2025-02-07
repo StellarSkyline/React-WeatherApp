@@ -5,14 +5,13 @@ import { useState, useEffect } from 'react'
 import { getWeatherData, getSearchCitiesData } from './Services/ApiServices'
 import { useDispatch, useSelector } from 'react-redux'
 import { updateData } from './Features/WeatherDataSlice'
+import { updateList } from './Features/SearchCities'
 
 function App() {
   //State
   const dispatch = useDispatch()
-  const [weatherData, setWeatherData] = useState('')
-  const [searchCities, setSearchCities] = useState([])
 
-  //API Calls, research a viewModel pattern
+  //API Calls data is stored in Redux
   const getCurrentWeather = (city) => {
     getWeatherData(city).then((res)=> {
       dispatch(updateData(res.data))
@@ -21,16 +20,14 @@ function App() {
 
   const getSearchCities = (city) => {
     getSearchCitiesData(city).then((res)=> {
-      setSearchCities(res.data)
+      dispatch(updateList(res.data))
     })
   }
-
-
 
 return (
   <>
     <SearchBar searchCity={(searchCity) => {
-      getCurrentWeather(searchCity)
+      getSearchCities(searchCity)
     }} />
     
     <WeatherDetail />

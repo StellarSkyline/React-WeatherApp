@@ -5,9 +5,9 @@ import { useSelector } from 'react-redux'
 
 
 const WeatherDetail = () => {
-  const data = useSelector(state=>state.weatherData)
-  console.log(data)
+  const data = useSelector(state=>state.city)
   
+  console.log(data)
   return (
     <>
     </>
