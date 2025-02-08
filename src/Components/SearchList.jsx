@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux'
 import { getWeatherData } from '../Services/ApiServices'
 import { useDispatch } from 'react-redux'
 import { updateData } from '../Features/WeatherDataSlice'
+import { updateList } from '../Features/SearchCities'
 
 const SearchList = ({showList}) => {
     const dispatch = useDispatch()
@@ -15,8 +16,9 @@ const SearchList = ({showList}) => {
             dispatch(updateData(res.data))
             showList(false)
         })
-    }
 
+        dispatch(updateList([]))
+    }
 
   return (
     <>

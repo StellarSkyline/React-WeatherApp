@@ -5,7 +5,7 @@ import { getSearchCitiesData } from '../Services/ApiServices'
 import { useDispatch } from 'react-redux'
 import { updateList } from '../Features/SearchCities'
 
-const SearchBar = () => {
+const SearchBar = ({showList}) => {
     const dispatch = useDispatch()
     const [city, setCity] = useState('')
 
@@ -21,6 +21,7 @@ const SearchBar = () => {
 
     const onChange = (e) => {
         setCity(e.target.value)
+        showList(true)
     }
 
     return (
