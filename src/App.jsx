@@ -4,9 +4,10 @@ import { useState } from 'react'
 import SearchList from './Components/SearchList'
 import WeatherDetail from './Components/WeatherDetail'
 
-
 function App() {
   const [showList, setShowList] = useState(true)
+
+  //Todo figure out elegant way to switch from detail back to list component
 
   //Load in correct Components
   const loadContent = (isList) => {
@@ -15,7 +16,6 @@ function App() {
     } else {
       return <WeatherDetail />
     }
-
   }
 
   return (
