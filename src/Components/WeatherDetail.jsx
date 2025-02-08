@@ -3,10 +3,36 @@ import { useSelector } from 'react-redux'
 
 
 const WeatherDetail = () => {
-  const data = useSelector(state=>state.weatherData)
+  const data = useSelector(state => state.weatherData)
   return (
     <>
-    <h1>{data.location.name} | {data.location.region} | {data.location.country}</h1>
+      <div className="home-example-two">
+        <div className="frame-1686555390">
+          <img className="group-39" src="group-390.svg" />
+          <div className="frame-1686555389">
+            <div className="hyderabad">{data.location.name}</div>
+            <div className="sub_text">{data.location.region} | {data.location.country}</div>
+          </div>
+          <div className="component-1">
+            <div className="_25">{data.current.temp_f}</div>
+          </div>
+        </div>
+        <div className="frame-1686555381">
+          <div className="frame-1686555377">
+            <div className="humidity">Humidity</div>
+            <div className="_20">{data.current.humidity}</div>
+          </div>
+          <div className="frame-1686555378">
+            <div className="uv">UV</div>
+            <div className="_4">{data.current.uv}</div>
+          </div>
+          <div className="frame-1686555379">
+            <div className="feels-like">Feels Like</div>
+            <div className="_38">{data.current.feelslike_f}</div>
+          </div>
+        </div>
+      </div>
+
     </>
   )
 }
