@@ -5,11 +5,13 @@ import { useSelector } from 'react-redux'
 
 const WeatherDetail = () => {
   const data = useSelector(state => state.weatherData)
+  const icon = data.current.condition.icon
+  icon.slice(2)
   return (
     <>
       <div className="home-example-two">
         <div className="frame-1686555390">
-          <img className="group-39" src="group-390.svg" />
+          <img className="group-39" src={icon} />
           <div className="frame-1686555389">
             <div className="hyderabad">{data.location.name}</div>
             <div className="sub_text">{data.location.region} | {data.location.country}</div>
