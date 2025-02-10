@@ -17,7 +17,6 @@ const SearchList = ({ showList }) => {
             dispatch(updateData(res.data))
             showList(false)
         })
-
         dispatch(updateList([]))
     }
 
@@ -34,9 +33,7 @@ const SearchList = ({ showList }) => {
 
                     </li>
                 ))}
-
             </ul>
-
         </>
     )
 }

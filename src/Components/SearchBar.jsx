@@ -1,6 +1,5 @@
 import React from 'react'
 import { useState } from 'react'
-import { FaSearch } from 'react-icons/fa'
 import { getSearchCitiesData } from '../Services/ApiServices'
 import { useDispatch } from 'react-redux'
 import { updateList } from '../Features/SearchCities'
