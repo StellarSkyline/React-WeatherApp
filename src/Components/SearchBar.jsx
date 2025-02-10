@@ -4,6 +4,7 @@ import { FaSearch } from 'react-icons/fa'
 import { getSearchCitiesData } from '../Services/ApiServices'
 import { useDispatch } from 'react-redux'
 import { updateList } from '../Features/SearchCities'
+import '../style/searchbar.css'
 
 const SearchBar = ({showList}) => {
     const dispatch = useDispatch()
@@ -28,19 +29,12 @@ const SearchBar = ({showList}) => {
         <>
             <form onSubmit={handleSubmit}>
                 <input
-                    className='bg-gray-300 rounded-lg p-5 h-11 w-80'
+                    className='searchBar rounded-lg p-5 h-11 w-80'
                     type="text"
                     placeholder="Search City"
                     value={city}
                     onChange={onChange}
                 />
-
-                <button 
-                className = 'ml-3' 
-                type='submit'>
-                    <FaSearch
-                    className ='h-5 w-5' />
-                </button>
             </form>
         </>
     )

@@ -28,10 +28,8 @@ const SearchList = ({ showList }) => {
                     <li className='' key={item.id} onClick={() => onClick(`${item.lat},${item.lon}`)}>
                         <div className="list-item">
                             <div className="data">
-                                <div className="city-text">{item.name}</div>
-                                <div className="weather">20</div>
+                                <div className="city-text">{item.name} | {item.region} | {item.country}</div>
                             </div>
-                            <div className="image"></div>
                         </div>
 
                     </li>
