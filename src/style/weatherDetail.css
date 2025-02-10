@@ -1,0 +1,211 @@
+.home-example-two,
+.home-example-two * {
+  box-sizing: border-box;
+  align-items: center;
+}
+.home-example-two {
+  background: #ffffff;
+  height: 812px;
+  position: relative;
+  overflow: hidden;
+}
+.frame-1686555390 {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+  justify-content: flex-start;
+  width: 204px;
+  left: 102px;
+  top: 170px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+
+
+.group-39 {
+  flex-shrink: 0;
+  width: 123px;
+  height: 113px;
+  position: relative;
+  overflow: visible;
+}
+.frame-1686555389 {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  align-items: center;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.hyderabad {
+  color: #2c2c2c;
+  text-align: center;
+  font-family: "Poppins-SemiBold", sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+  position: relative;
+  width: 172px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sub_text {
+    color: #2c2c2c;
+    text-align: center;
+    font-family: "Poppins-SemiBold", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    width: 172px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
+.vector {
+  flex-shrink: 0;
+  width: 21px;
+  height: 21px;
+  position: relative;
+  overflow: visible;
+}
+.component-1 {
+  flex-shrink: 0;
+  width: 105px;
+  height: 70px;
+  position: relative;
+}
+._25 {
+  color: #2c2c2c;
+  text-align: center;
+  font-family: "Poppins-Medium", sans-serif;
+  font-size: 70px;
+  font-weight: 500;
+  position: absolute;
+  right: 6.67%;
+  left: 5.71%;
+  width: 87.62%;
+  bottom: 0%;
+  top: 0%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ellipse-1 {
+  border-radius: 50%;
+  border-style: solid;
+  border-color: #2c2c2c;
+  border-width: 1.5px;
+  width: 7.62%;
+  height: 11.43%;
+  position: absolute;
+  right: -0.95%;
+  left: 93.33%;
+  bottom: 85.71%;
+  top: 2.86%;
+}
+.frame-1686555381 {
+  background: #f2f2f2;
+  border-radius: 16px;
+  padding: 16px;
+  display: flex;
+  flex-direction: row;
+  gap: 56px;
+  align-items: center;
+  justify-content: flex-start;
+  width: 274px;
+  position: absolute;
+  left: 50%;
+  translate: -50%;
+  top: 350px;
+}
+.frame-1686555377 {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  width: 60px;
+  position: relative;
+}
+.humidity {
+  color: #c4c4c4;
+  text-align: center;
+  font-family: "Poppins-Medium", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  position: relative;
+  align-self: stretch;
+}
+._20 {
+  color: #9a9a9a;
+  text-align: center;
+  font-family: "Poppins-Medium", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  position: relative;
+  align-self: stretch;
+}
+.frame-1686555378 {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  width: 17px;
+  position: relative;
+}
+.uv {
+  color: #c4c4c4;
+  text-align: center;
+  font-family: "Poppins-Medium", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  position: relative;
+  align-self: stretch;
+}
+._4 {
+  color: #9a9a9a;
+  text-align: center;
+  font-family: "Poppins-Medium", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  position: relative;
+  align-self: stretch;
+}
+.frame-1686555379 {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  width: 41px;
+  position: relative;
+}
+.feels-like {
+  color: #c4c4c4;
+  text-align: center;
+  font-family: "Poppins-Medium", sans-serif;
+  font-size: 8px;
+  font-weight: 500;
+  position: relative;
+  align-self: stretch;
+}
+._38 {
+  color: #9a9a9a;
+  text-align: center;
+  font-family: "Poppins-Medium", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  position: relative;
+  align-self: stretch;
+}

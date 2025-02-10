@@ -1,0 +1,63 @@
+.list-item,
+.list-item * {
+  box-sizing: border-box;
+  width: 336px;
+  height: 117px;
+  margin-bottom: 10px;
+}
+.list-item {
+  background: #f2f2f2;
+  border-radius: 16px;
+  padding: 16px;
+  display: flex;
+  flex-direction: row;
+  gap: 106px;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.data {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  width: 85px;
+}
+.city-text {
+  color: #2c2c2c;
+  text-align: left;
+  font-family: "Poppins-SemiBold", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+.weather {
+  color: #2c2c2c;
+  text-align: left;
+  font-family: "Poppins-Medium", sans-serif;
+  font-size: 60px;
+  font-weight: 500;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 30px;
+}
+.image {
+  background: #d9d9d9;
+  flex-shrink: 0;
+  width: 83px;
+  height: 67px;
+  position: relative;
+}
+
+.ulItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers the list items horizontally */
+  margin-top: 5px;
+}
