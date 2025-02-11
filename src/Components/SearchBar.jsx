@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import { getSearchCitiesData, getWeatherData } from '../Services/ApiServices'
 import { useDispatch } from 'react-redux'
-import { updateList } from '../Features/SearchCities'
+import { updateList, clearList } from '../Features/SearchCities'
 
 import '../style/searchbar.css'
 
@@ -31,11 +31,11 @@ const SearchBar = ({ showList }) => {
         e.preventDefault()
         fetchData(city)
         setCity('')
-
     }
 
     const onChange = (e) => {
         setCity(e.target.value)
+        dispatch(clearList())
         showList(true)
     }
 

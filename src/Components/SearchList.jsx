@@ -3,7 +3,8 @@ import { useSelector } from 'react-redux'
 import { getWeatherData } from '../Services/ApiServices'
 import { useDispatch } from 'react-redux'
 import { updateData } from '../Features/WeatherDataSlice'
-import { updateList, clearList} from '../Features/SearchCities'
+import { updateList, clearList } from '../Features/SearchCities'
+import { nanoid } from '@reduxjs/toolkit'
 import '../style/listItem.css'
 
 const SearchList = ({ showList }) => {
@@ -24,12 +25,15 @@ const SearchList = ({ showList }) => {
         <>
             <ul className='ulItem'>
                 {cityData.map((item) => (
-                    <li className='' key={item.id} onClick={() => onClick(`${item.location.lat},${item.location.lon}`)}>
+                    <li className='' key={nanoid()} onClick={() => onClick(`${item.location.lat},${item.location.lon}`)}>
                         <div className="list-item">
                             <div className="data">
-                                <div className="city-text">{item.location.name} | {item.current.temp_f} | {item.location.country}</div>
+                                <h1 className="city-text">{item.location.name}</h1>
+                                <h1 className="weather">{item.current.temp_f}°</h1>
                             </div>
+                            <img className = 'image'src={item.current.condition.icon}/>
                         </div>
+
 
                     </li>
                 ))}
