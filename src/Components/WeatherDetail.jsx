@@ -13,10 +13,10 @@ const WeatherDetail = () => {
           <img className="group-39" src={icon} />
           <div className="frame-1686555389">
             <div className="hyderabad">{data.location.name}</div>
-            <div className="sub_text">{data.location.region} | {data.location.country}</div>
+            <div className="sub_text">{data.location.region}</div>
           </div>
           <div className="component-1">
-            <div className="_25">{data.current.temp_f}</div>
+            <div className="_25">{data.current.temp_f}°</div>
           </div>
         </div>
         <div className="frame-1686555381">

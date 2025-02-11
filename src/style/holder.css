@@ -3,8 +3,8 @@
   box-sizing: border-box;
   width: 336px;
   height: 117px;
+  margin-bottom: 10px;
 }
-
 .list-item {
   background: #f2f2f2;
   border-radius: 16px;
@@ -15,55 +15,47 @@
   align-items: center;
   justify-content: center;
   position: relative;
-  width: 336px;
-  height: 117px;
-  margin-bottom: 10px;
 }
-
 .data {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  width: 85px;
-  position: relative;
-}
-
-.city-text {
-  min-width: 0px;
+  flex-shrink: 0;
   margin-top: 5px;
-  height: 20px;
+}
+.city-text {
   color: #2c2c2c;
   text-align: center;
   font-family: "Poppins-SemiBold", sans-serif;
   font-size: 20px;
-  font-weight: 600;
-  text-align: start;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
 .weather {
   color: #2c2c2c;
-  text-align: left;
+  text-align: center;
   font-family: "Poppins-Medium", sans-serif;
-  font-size: 50px;
-  font-weight: 500;
+  font-size: 20px;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  height: 30px;
 }
-
 .image {
+  background: #d9d9d9;
   flex-shrink: 0;
-  width: 85px;
-  height: 85px;
+  width: 83px;
+  height: 67px;
   position: relative;
 }
 
 .ulItem {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  /* Centers the list items horizontally */
+  align-items: center; /* Centers the list items horizontally */
   margin-top: 10px;
   border-radius: 5px;
 }

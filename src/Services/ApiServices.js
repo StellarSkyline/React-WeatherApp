@@ -15,5 +15,4 @@ export async function getWeatherData(city) {
 
 export async function getSearchCitiesData(city) {
     return await apiRequest.get(`search.json?q=${city}`)
-
 }
