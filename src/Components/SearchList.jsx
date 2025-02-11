@@ -28,7 +28,7 @@ const SearchList = ({ showList }) => {
                     <li className='' key={nanoid()} onClick={() => onClick(`${item.location.lat},${item.location.lon}`)}>
                         <div className="list-item">
                             <div className="data">
-                                <h1 className="city-text">{item.location.name}</h1>
+                                <h1 className="city-text">{item.location.name} | {item.location.region}</h1>
                                 <h1 className="weather">{item.current.temp_f}°</h1>
                             </div>
                             <img className = 'image'src={item.current.condition.icon}/>

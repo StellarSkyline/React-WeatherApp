@@ -4,6 +4,7 @@
   width: 336px;
   height: 117px;
 }
+
 .list-item {
   background: #f2f2f2;
   border-radius: 16px;
@@ -18,17 +19,20 @@
   height: 117px;
   margin-bottom: 10px;
 }
+
 .data {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  flex-shrink: 0;
   width: 85px;
   position: relative;
 }
+
 .city-text {
   min-width: 0px;
+  margin-top: 5px;
+  height: 20px;
   color: #2c2c2c;
   text-align: center;
   font-family: "Poppins-SemiBold", sans-serif;
@@ -36,6 +40,7 @@
   font-weight: 600;
   text-align: start;
 }
+
 .weather {
   color: #2c2c2c;
   text-align: left;
@@ -46,6 +51,7 @@
   align-items: center;
   justify-content: flex-start;
 }
+
 .image {
   flex-shrink: 0;
   width: 85px;
@@ -56,8 +62,8 @@
 .ulItem {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centers the list items horizontally */
+  align-items: center;
+  /* Centers the list items horizontally */
   margin-top: 10px;
   border-radius: 5px;
 }
-
