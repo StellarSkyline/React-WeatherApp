@@ -8,10 +8,13 @@ export const SearchCitySlice = createSlice({
     initialState,
     reducers: {
         updateList: (state, action) => {
-            return action.payload
+           state.push(action.payload)
+        },
+        clearList:(state,action)=>{
+            return initialState
         }
     }
 })
 
-export const {updateList} = SearchCitySlice.actions
+export const {updateList, clearList} = SearchCitySlice.actions
 export default SearchCitySlice.reducer

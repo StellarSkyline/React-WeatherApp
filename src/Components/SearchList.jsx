@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux'
 import { getWeatherData } from '../Services/ApiServices'
 import { useDispatch } from 'react-redux'
 import { updateData } from '../Features/WeatherDataSlice'
-import { updateList } from '../Features/SearchCities'
+import { updateList, clearList} from '../Features/SearchCities'
 import '../style/listItem.css'
 
 const SearchList = ({ showList }) => {
@@ -17,17 +17,17 @@ const SearchList = ({ showList }) => {
             dispatch(updateData(res.data))
             showList(false)
         })
-        dispatch(updateList([]))
+        dispatch(clearList())
     }
 
     return (
         <>
             <ul className='ulItem'>
                 {cityData.map((item) => (
-                    <li className='' key={item.id} onClick={() => onClick(`${item.lat},${item.lon}`)}>
+                    <li className='' key={item.id} onClick={() => onClick(`${item.location.lat},${item.location.lon}`)}>
                         <div className="list-item">
                             <div className="data">
-                                <div className="city-text">{item.name} | {item.region} | {item.country}</div>
+                                <div className="city-text">{item.location.name} | {item.current.temp_f} | {item.location.country}</div>
                             </div>
                         </div>
 
