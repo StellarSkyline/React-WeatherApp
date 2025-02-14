@@ -1,11 +1,10 @@
 import React from 'react'
 import '../style/weatherDetail.css'
-import { useContext } from 'react'
-import Context from '../Context/context'
+import { UseMyContext } from '../Context/Context'
 
 
 const WeatherDetail = () => {
-  const {weatherData} = useContext(Context)
+  const {weatherData} = UseMyContext()
   const icon = weatherData.current.condition.icon
   icon.slice(2)
   return (

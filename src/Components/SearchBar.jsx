@@ -2,12 +2,12 @@ import React from 'react'
 import { useState, useContext } from 'react'
 import { getSearchCitiesData, getWeatherData } from '../Services/ApiServices'
 import '../style/searchbar.css'
-import Context from '../Context/context'
+import { UseMyContext } from '../Context/Context'
 
 
 const SearchBar = ({ showList }) => {
     const [city, setCity] = useState('')
-    const {setCityData} = useContext(Context)
+    const {setCityData} = UseMyContext()
 
     //Chaining multiple axios requests
     const fetchData = async (city) => {

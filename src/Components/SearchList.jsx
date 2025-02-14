@@ -3,14 +3,14 @@ import { getWeatherData } from '../Services/ApiServices'
 import { nanoid } from '@reduxjs/toolkit'
 import '../style/listItem.css'
 import { useContext } from 'react'
-import Context from '../Context/context'
+import { UseMyContext } from '../Context/Context'
 
 const SearchList = ({ showList }) => {
 
     //get data from context
-    const {cityData} = useContext(Context)
-    const {setCityData} = useContext(Context)   
-    const {setWeatherData} = useContext(Context)
+    const {cityData} = UseMyContext()
+    const {setCityData} = UseMyContext()
+    const {setWeatherData} = UseMyContext()
 
 
     //Update current weather choice into redux store
