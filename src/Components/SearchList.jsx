@@ -1,24 +1,25 @@
 import React from 'react'
-import { useSelector } from 'react-redux'
 import { getWeatherData } from '../Services/ApiServices'
-import { useDispatch } from 'react-redux'
-import { updateData } from '../Features/WeatherDataSlice'
-import { updateList, clearList } from '../Features/SearchCities'
 import { nanoid } from '@reduxjs/toolkit'
 import '../style/listItem.css'
+import { useContext } from 'react'
+import Context from '../Context/context'
 
 const SearchList = ({ showList }) => {
-    const dispatch = useDispatch()
-    //get City Search Data from redux store
-    const cityData = useSelector(state => state.city)
+
+    //get data from context
+    const {cityData} = useContext(Context)
+    const {setCityData} = useContext(Context)   
+    const {setWeatherData} = useContext(Context)
+
 
     //Update current weather choice into redux store
     const onClick = (coordinates) => {
         getWeatherData(coordinates).then((res) => {
-            dispatch(updateData(res.data))
+            setWeatherData(res.data)
             showList(false)
         })
-        dispatch(clearList())
+        setCityData([])
     }
 
     return (
@@ -33,8 +34,6 @@ const SearchList = ({ showList }) => {
                             </div>
                             <img className = 'image'src={item.current.condition.icon}/>
                         </div>
-
-
                     </li>
                 ))}
             </ul>

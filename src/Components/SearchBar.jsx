@@ -1,14 +1,13 @@
 import React from 'react'
-import { useState } from 'react'
+import { useState, useContext } from 'react'
 import { getSearchCitiesData, getWeatherData } from '../Services/ApiServices'
-import { useDispatch } from 'react-redux'
-import { updateList, clearList } from '../Features/SearchCities'
-
 import '../style/searchbar.css'
+import Context from '../Context/context'
+
 
 const SearchBar = ({ showList }) => {
-    const dispatch = useDispatch()
     const [city, setCity] = useState('')
+    const {setCityData} = useContext(Context)
 
     //Chaining multiple axios requests
     const fetchData = async (city) => {
@@ -22,7 +21,7 @@ const SearchBar = ({ showList }) => {
         const results = await Promise.all(requests)
         const data = results.map(result => result.data)
         data.forEach((item) => {
-            dispatch(updateList(item))
+            setCityData(prev => [...prev, item])
         })
         return data
     }
@@ -35,7 +34,7 @@ const SearchBar = ({ showList }) => {
 
     const onChange = (e) => {
         setCity(e.target.value)
-        dispatch(clearList())
+        setCityData([])
         showList(true)
     }
 

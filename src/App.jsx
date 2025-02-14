@@ -4,6 +4,7 @@ import { useState } from 'react'
 import SearchList from './Components/SearchList'
 import WeatherDetail from './Components/WeatherDetail'
 
+
 function App() {
   const [showList, setShowList] = useState(true)
   return (
@@ -13,7 +14,6 @@ function App() {
     </>
   )
 }
-
 export default App
 
 
