@@ -4,7 +4,7 @@ import { useState,createContext,useContext } from "react";
 const context = createContext()
 
 //Create Context Provider
-const ContextProvider = ({children}) => {
+export const ContextProvider = ({children}) => {
     const [weatherData, setWeatherData] = useState({})
     const [cityData, setCityData] = useState([])
 
@@ -16,8 +16,6 @@ const ContextProvider = ({children}) => {
 }
 
  //create custom hook to provide context
- const UseMyContext = () => {
+ export const UseMyContext = () => {
     return useContext(context)
 }
-
-export {ContextProvider, UseMyContext}
