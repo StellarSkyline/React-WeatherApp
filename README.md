@@ -4,6 +4,7 @@ Techniques used:
  - Vite
  - Tailwind
  - React Redux
+ - Context API
  - Axios
  - The Weather API (https://www.weatherapi.com/)
 
